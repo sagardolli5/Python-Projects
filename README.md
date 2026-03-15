@@ -4,8 +4,8 @@ One project at a time, one skill at a time.
 
 ## 📁 Projects
 
-| Project | Description | Run |
-|--------|-------------|-----|
+| Project | Description |
+|--------|-------------|
 | [Morse Code Translator](./Morse-code-translator) | Converts text to morse code |
 
 ## 🛠️ How to Run Locally
