@@ -6,7 +6,7 @@ One project at a time, one skill at a time.
 
 | Project | Description | Run |
 |--------|-------------|-----|
-| [Morse Code Translator](./Morse-code-translator) | Converts text to morse code | [▶ Play](https://replit.com/YOUR_LINK) |
+| [Morse Code Translator](./Morse-code-translator) | Converts text to morse code |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
