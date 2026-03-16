@@ -5,7 +5,7 @@ One project at a time, one skill at a time.
 | Project | Description |
 |--------|-------------|
 | [Morse Code Translator](./Morse-code-translator) | Converts text to morse code |
-| [Tic Tac Toe Game](./Tic-Tac-Toe-game) | 2 player Tic Tac Toe game |
+| [Tic Tac Toe Game](./Tic-Tac-Toe-game) | Play Tic Tac Toe against the computer |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
