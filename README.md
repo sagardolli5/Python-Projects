@@ -1,12 +1,11 @@
 # 🐍 Python Projects
-
 One project at a time, one skill at a time.
 
 ## 📁 Projects
-
 | Project | Description |
 |--------|-------------|
 | [Morse Code Translator](./Morse-code-translator) | Converts text to morse code |
+| [Tic Tac Toe Game](./Tic-Tac-Toe-game) | 2 player Tic Tac Toe game |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
@@ -24,7 +23,8 @@ One project at a time, one skill at a time.
 
 ## 📅 Progress
 - Day 1 - Morse Code Translator ✅
-- Day 2 - Coming soon...
+- Day 2 - Tic Tac Toe Game ✅
+- Day 3 - Coming soon...
 
 ---
 ⭐ Star this repo if you find it helpful!
