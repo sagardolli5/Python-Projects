@@ -1,6 +1,6 @@
 import os
-from tkinter import filedialog, simpledialog
-from PIL import Image, ImageTk, ImageDraw, ImageFont
+from tkinter import filedialog
+from PIL import Image, ImageTk
 import ttkbootstrap as tb
 
 PINK = "#FF00FF"
