@@ -6,6 +6,8 @@ player_name = str(input("Please enter your name: ").title())
 if is_game_on == "y":
     print(ascii_art["banner"])
     print(f"Welcome! {player_name}, Let's Play!")
+else:
+    print("Good Bye!")
 
 board = {
     1: "1", 2: "2", 3: "3",
