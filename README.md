@@ -6,6 +6,7 @@ One project at a time, one skill at a time.
 |--------|-------------|
 | [Morse Code Translator](./Morse-code-translator) | Converts text to morse code |
 | [Tic Tac Toe Game](./Tic-Tac-Toe-game) | Play Tic Tac Toe against the computer |
+| [Watermarking Desktop App](./Watermarking-Desktop-App) | Add watermarks to images using a desktop app |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
@@ -24,7 +25,8 @@ One project at a time, one skill at a time.
 ## 📅 Progress
 - Day 1 - Morse Code Translator ✅
 - Day 2 - Tic Tac Toe Game ✅
-- Day 3 - Coming soon...
+- Day 3 - Watermarking Desktop App ✅
+- Day 4 - Coming soon...
 
 ---
 ⭐ Star this repo if you find it helpful!
