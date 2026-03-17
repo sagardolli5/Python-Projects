@@ -29,7 +29,7 @@ def img_upload():
         canvas.coords(canvas_image, new_img.width // 2, new_img.height // 2)
         canvas.itemconfig(canvas_image, image=photo)
 
-# ---------------------------- UPLOAD IMAGE ------------------------------- #
+# ---------------------------- SAVE IMAGE ------------------------------- #
 def save_img():
     global new_img, photo
 
