@@ -1,5 +1,6 @@
 # 🐍 Python Projects
 One project at a time, one skill at a time.
+
 ## 📁 Projects
 | Project | Description |
 |--------|-------------|
@@ -7,6 +8,8 @@ One project at a time, one skill at a time.
 | [Tic Tac Toe Game](./Tic-Tac-Toe-game) | Play Tic Tac Toe against the computer |
 | [Watermarking Desktop App](./Watermarking-Desktop-App) | Add watermarks to images using a desktop app |
 | [Typing Speed Test](./Typing-Speed-Test) | A desktop app to test and measure your typing speed |
+| [Breakout Game](./Breakout-Game) | A classic brick-breaking arcade game built with Turtle |
+
 ## 🛠️ How to Run Locally
 1. Clone the repo:
 ```bash
@@ -25,6 +28,8 @@ One project at a time, one skill at a time.
 - Day 2 - Tic Tac Toe Game ✅
 - Day 3 - Watermarking Desktop App ✅
 - Day 4 - Typing Speed Test ✅
-- Day 5 - Coming soon...
+- Day 5 - Breakout Game ✅
+- Day 6 - Coming soon...
+
 ---
 ⭐ Star this repo if you find it helpful!
