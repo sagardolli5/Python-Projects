@@ -266,3 +266,61 @@
     text-align: center;
   }
 }
+
+/* ─── AMENITY TOGGLE PILLS ─── */
+.am-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.am-toggle {
+  position: relative;
+}
+
+.am-toggle input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.am-toggle-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: #faecea;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.18s;
+  user-select: none;
+}
+
+.am-toggle-label:hover {
+  border-color: var(--maroon);
+  color: var(--maroon);
+  background: var(--white);
+}
+
+/* checked state */
+.am-toggle input[type="checkbox"]:checked + .am-toggle-label {
+  background: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--white);
+}
+
+.am-toggle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.6;
+  flex-shrink: 0;
+}

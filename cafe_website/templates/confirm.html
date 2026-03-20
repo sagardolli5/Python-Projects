@@ -3,6 +3,7 @@
 {% block content %}
 
 <!-- ─── CONFIRM DELETE DIALOG ─── -->
+<div style="min-height: 100vh;">
 <div class="cd-overlay" id="confirmOverlay" style="display:flex;">
   <div class="cd-box">
 
@@ -26,7 +27,7 @@
     <!-- ACTIONS -->
     <div class="cd-actions">
       <a href="{{ url_for('home') }}" class="cd-cancel">Cancel</a>
-      <form action="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" method="POST" style="flex:1;display:flex;">
+      <form action="{{ url_for('delete', cafe_id=cafe.id) }}" method="POST" style="flex:1;display:flex;">
         <button type="submit" class="cd-confirm" style="flex:1;">
           🗑️ Yes, Remove
         </button>
@@ -35,7 +36,7 @@
 
   </div>
 </div>
-
+</div>
 
 
 {% endblock %}

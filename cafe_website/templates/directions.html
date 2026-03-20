@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Directions — {{ cafe.name }}{% endblock %}
+{% block content %}
+
+<div style="min-height: 100vh;">
+  <div class="dm-backdrop">
+    <div class="dm-card">
+
+      <!-- HEADER -->
+      <div class="dm-header">
+        <div class="dm-header-left">
+          <span class="dm-eyebrow">Directions</span>
+          <h2 class="dm-title">{{ cafe.name }}</h2>
+        </div>
+        <a href="{{ url_for('home') }}" class="dm-close">✕</a>
+      </div>
+
+      <!-- MAP -->
+      <div class="dm-map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q={{ cafe.location | urlencode }}&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="dm-footer">
+        <div class="dm-address">
+          <div class="dm-address-icon">📍</div>
+          {{ cafe.location }}
+        </div>
+        <a
+          href="https://www.google.com/maps/search/?api=1&query={{ cafe.location | urlencode }}"
+          target="_blank"
+          class="dm-open-btn">
+          Open in Maps ↗
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
