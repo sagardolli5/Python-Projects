@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Cafe Lists{% endblock %}
+{% block content %}
+
+<!-- ─── CONFIRM DELETE DIALOG ─── -->
+<div class="cd-overlay" id="confirmOverlay" style="display:flex;">
+  <div class="cd-box">
+
+    <!-- ICON -->
+    <div class="cd-icon-wrap">
+      <div class="cd-icon">🗑️</div>
+    </div>
+
+    <!-- TEXT -->
+    <div class="cd-content">
+      <h3 class="cd-title">Remove this café?</h3>
+      <p class="cd-message">
+        This will permanently remove
+        <span class="cd-cafe-name" id="cd-cafe-name">this café</span>
+        from your list. This action cannot be undone.
+      </p>
+    </div>
+
+    <div class="cd-divider"></div>
+
+    <!-- ACTIONS -->
+    <div class="cd-actions">
+      <a href="{{ url_for('home') }}" class="cd-cancel">Cancel</a>
+      <form action="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" method="POST" style="flex:1;display:flex;">
+        <button type="submit" class="cd-confirm" style="flex:1;">
+          🗑️ Yes, Remove
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+{% endblock %}

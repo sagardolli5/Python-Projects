@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Cafe Lists{% endblock %}
+{% block content %}
+
+<!-- ─── DETAILS ─── -->
+<div style="display:flex; justify-content:center; align-items:center; height:100vh; background:#f5f5f5;">
+  <div style="width:700px; background:white; border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+    <!-- IMAGE -->
+    {% if cafe.photo_url %}
+    <img src="{{ cafe.photo_url }}" style="width:100%; height:300px; object-fit:cover;">
+    {% endif %}
+    <div style="padding:20px;">
+      <!-- NAME -->
+      <h2 style="margin:0;">{{ cafe.name }}</h2>
+      <!-- DESCRIPTION -->
+      <p style="color:#666; margin-top:10px;">{{ cafe.description }}</p>
+      <!-- INFO -->
+      <p>📍 {{ cafe.location }}</p>
+      <p>☎️ {{ cafe.phone }}</p>
+      <p>⏰ {{ cafe.hours }}</p>
+      <!-- FEATURES -->
+      <div style="display:flex; flex-wrap:wrap; gap:15px; margin-top:20px;">
+        <!-- WIFI -->
+        <div title="WiFi">📶</div>
+        <!-- TOILET -->
+        <div title="Toilet">🚻}</div>
+        <!-- SOCKETS -->
+        <div title="Sockets">🔌</div>
+        <!-- CALLS -->
+        <div title="Take Calls">📞</div>
+        <!-- COFFEE PRICE -->
+        <div title="Coffee Price">☕</div>
+        <!-- SEATS -->
+        <div title="Seats">💺</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+</div>
