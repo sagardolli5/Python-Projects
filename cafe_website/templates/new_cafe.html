@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block title %}Add Café{% endblock %}
+{% block content %}
+
+<div style="min-height: 100vh;">
+<div class="am-overlay" id="addOverlay" style="display:flex;">
+  <div class="am-modal">
+
+    <!-- HEADER -->
+    <div class="am-header">
+      <div class="am-header-left">
+        <span class="am-eyebrow">New Entry</span>
+        <h2 class="am-title">Add a Café</h2>
+      </div>
+      <a href="{{ url_for('home') }}" class="am-close">✕</a>
+    </div>
+
+    <form action="{{ url_for('add_cafe') }}" method="POST">
+
+      <div class="am-body">
+
+        <!-- IDENTITY -->
+        <p class="am-section">Identity</p>
+        <div class="am-row">
+          <div class="am-group">
+            <label class="am-label">Name <span class="am-label-required">*</span></label>
+            <input class="am-input" type="text" name="name" placeholder="e.g. The Corner Cup">
+          </div>
+          <div class="am-group">
+            <label class="am-label">Category</label>
+            <input class="am-input" type="text" name="category" placeholder="e.g. Specialty Coffee">
+          </div>
+        </div>
+
+        <div class="am-group">
+          <label class="am-label">Location <span class="am-label-required">*</span></label>
+          <input class="am-input" type="text" name="location" placeholder="123 Main St, City">
+        </div>
+
+        <!-- CONTACT & HOURS -->
+        <p class="am-section">Contact &amp; Hours</p>
+        <div class="am-row">
+          <div class="am-group">
+            <label class="am-label">Phone</label>
+            <input class="am-input" type="text" name="phone" placeholder="+1 000 000 0000">
+          </div>
+          <div class="am-group">
+            <label class="am-label">Opening Hours</label>
+            <input class="am-input" type="text" name="hours" placeholder="Mon–Fri 8am–6pm">
+          </div>
+        </div>
+        <div class="am-row">
+          <div class="am-group">
+            <label class="am-label">Reservation Hours</label>
+            <input class="am-input" type="text" name="reservation_hours" placeholder="Daily 10am–4pm">
+          </div>
+          <div class="am-group">
+            <label class="am-label">Photo URL</label>
+            <input class="am-input" type="text" name="photo_url" placeholder="https://…">
+          </div>
+        </div>
+
+
+        <!-- AMENITIES -->
+        <p class="am-section">Amenities</p>
+        <div class="am-row">
+          <div class="am-group">
+            <label class="am-label">Seats Available</label>
+            <input class="am-input" type="number" name="seats_available" placeholder="e.g. 40" min="0">
+          </div>
+          <div class="am-group">
+          <label class="am-label">Coffee Prices</label>
+          <input class="am-input" type="text" name="coffee_prices" placeholder="Espresso £2.80 · Flat White £3.50 · Cold Brew £4.00">
+        </div>
+        </div>
+
+        <!-- CHECKBOXES -->
+<div class="am-toggles">
+
+  <div class="am-toggle">
+    <input type="checkbox" name="has_wifi" id="t-wifi">
+    <label class="am-toggle-label" for="t-wifi">
+      <span class="am-toggle-dot"></span>📶 WiFi
+    </label>
+  </div>
+
+  <div class="am-toggle">
+    <input type="checkbox" name="has_toilet" id="t-toilet">
+    <label class="am-toggle-label" for="t-toilet">
+      <span class="am-toggle-dot"></span>🚻 Toilet
+    </label>
+  </div>
+
+  <div class="am-toggle">
+    <input type="checkbox" name="has_parking" id="t-parking">
+    <label class="am-toggle-label" for="t-parking">
+      <span class="am-toggle-dot"></span>🅿️ Parking
+    </label>
+  </div>
+
+  <div class="am-toggle">
+    <input type="checkbox" name="has_sockets" id="t-sockets">
+    <label class="am-toggle-label" for="t-sockets">
+      <span class="am-toggle-dot"></span>🔌 Sockets
+    </label>
+  </div>
+
+  <div class="am-toggle">
+    <input type="checkbox" name="can_take_calls" id="t-calls">
+    <label class="am-toggle-label" for="t-calls">
+      <span class="am-toggle-dot"></span>📞 Calls OK
+    </label>
+  </div>
+
+</div>
+
+        <!-- ABOUT -->
+        <p class="am-section">About</p>
+        <div class="am-group">
+          <label class="am-label">Description</label>
+          <textarea class="am-textarea" name="description" placeholder="What makes this café special?"></textarea>
+        </div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="am-footer">
+        <span class="am-footer-note">Fields marked <span style="color:var(--red)">*</span> are required</span>
+        <button type="submit" class="am-submit">
+          <span class="am-submit-icon">✦</span>
+          Add to Café List
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+</div>
+{% endblock %}

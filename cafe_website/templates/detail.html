@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Cafe Lists{% endblock %}
+{% block content %}
+
+<!-- ─── DETAILS ─── -->
+<div class="cf-page">
+  <div class="cf-backdrop">
+    <div class="cf-card">
+      <!-- CLOSE BUTTON -->
+      <form action="{{ url_for('home') }}" method="GET" class="cf-close-form">
+        <button class="cf-close" aria-label="Close">✕</button>
+      </form>
+      <!-- LEFT: PHOTO + NAME -->
+      <div class="cf-left">
+        {% if cafe.photo_url %}
+          <img class="cf-photo" src="{{ cafe.photo_url }}" alt="{{ cafe.name }}">
+          <div class="cf-photo-overlay"></div>
+        {% else %}
+          <div class="cf-no-photo">☕</div>
+        {% endif %}
+        <div class="cf-photo-name">
+          <p class="cf-eyebrow">Café</p>
+          <h1 class="cf-name">{{ cafe.name }}</h1>
+        </div>
+      </div>
+      <!-- RIGHT: INFO -->
+      <div class="cf-right">
+        <div class="cf-right-inner">
+          <p class="cf-label">Details</p>
+          <div class="cf-info-rows">
+            <div class="cf-row">
+              <div class="cf-row-icon">📍</div>
+              <div class="cf-row-text">
+                <span class="cf-row-key">Location</span>
+                <span class="cf-row-val">{{ cafe.location }}</span>
+              </div>
+            </div>
+            <div class="cf-row">
+              <div class="cf-row-icon">☎️</div>
+              <div class="cf-row-text">
+                <span class="cf-row-key">Phone</span>
+                <span class="cf-row-val">{{ cafe.phone }}</span>
+              </div>
+            </div>
+            <div class="cf-row">
+              <div class="cf-row-icon">⏰</div>
+              <div class="cf-row-text">
+                <span class="cf-row-key">Hours</span>
+                <span class="cf-row-val">{{ cafe.hours | replace('·', '\n') }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="cf-divider"></div>
+          <p class="cf-label">Amenities</p>
+          <div class="cf-pills">
+            <div class="cf-pill"><span class="cf-pill-dot"></span>WiFi</div>
+            <div class="cf-pill"><span class="cf-pill-dot"></span>Toilet</div>
+            <div class="cf-pill"><span class="cf-pill-dot"></span>Sockets</div>
+            <div class="cf-pill"><span class="cf-pill-dot"></span>Calls OK</div>
+            <div class="cf-pill"><span class="cf-pill-dot"></span>Coffee Price</div>
+            <div class="cf-pill"><span class="cf-pill-dot"></span>Seats</div>
+          </div>
+        </div>
+        <div class="cf-strip">
+          <span class="cf-strip-note">Find your perfect spot</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
