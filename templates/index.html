@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block title %}Taskly{% endblock %}
+{% block content %}
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-icon stacked-logo"></div>
+    <span class="logo-text">Taskly</span>
+  </a>
+  <span class="nav-tagline">✦ Taskly — Where Tasks Meet Simplicity.</span>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">✦ Simple. Clean. Effective.</div>
+  <h1>The simplest way to<br/><span>manage your tasks</span></h1>
+  <p>Taskly helps you stay organised, focused, and on top of everything — without the clutter of complicated tools.</p>
+  <div class="hero-btns">
+    <a href="/register" class="btn btn-primary btn-lg">Get Started — it's free</a>
+    <a href="/login"    class="btn btn-ghost btn-lg">Log In</a>
+  </div>
+
+</section>
+
+
+<!-- APP PREVIEW -->
+<div class="preview">
+  <div class="preview-card">
+    <div class="preview-header">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+    </div>
+    <div class="preview-body">
+      <div class="preview-topbar">
+        <div class="preview-search"></div>
+        <div class="preview-badge"></div>
+        <div class="preview-btn"></div>
+      </div>
+      <div class="preview-task">
+        <div class="preview-dot"></div>
+        <div class="preview-line"></div>
+        <div class="preview-del"></div>
+      </div>
+      <div class="preview-task">
+        <div class="preview-dot"></div>
+        <div class="preview-line short"></div>
+        <div class="preview-del"></div>
+      </div>
+      <div class="preview-task" style="opacity:.5;">
+        <div class="preview-dot" style="background:#6ee7b7;border-color:#34d399;"></div>
+        <div class="preview-line" style="background:#c7d2fe; width:45%; flex:none;"></div>
+        <div class="preview-del"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-label">Why Taskly</div>
+  <h2 class="section-title">Everything you need, nothing you don't</h2>
+  <p class="section-sub">Built for people who just want to get things done.</p>
+
+  <div class="features-grid">
+
+    <div class="feature-card">
+      <div class="feature-icon">✓</div>
+      <div class="feature-title">Add Tasks Instantly</div>
+      <div class="feature-desc">Type your task and hit add — no extra steps, no complicated forms. Just get it down.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <div class="feature-title">Search Your Tasks</div>
+      <div class="feature-desc">Quickly find any task by name. Whether you have 5 or 500 tasks, it's always fast.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🗑️</div>
+      <div class="feature-title">Delete in One Click</div>
+      <div class="feature-desc">Done with a task? Remove it instantly. No confirmations, no friction.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-title">Your Tasks, Private</div>
+      <div class="feature-desc">Each account is separate. Your tasks are only visible to you, nobody else.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <div class="feature-title">See Your Total</div>
+      <div class="feature-desc">Always know how many tasks you have left at a glance — front and centre.</div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">Blazing Fast</div>
+      <div class="feature-desc">No bloat, no slow loading. Taskly is lightweight and snappy on any device.</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Free to use</div>
+    </div>
+    <div>
+      <div class="stat-number">0</div>
+      <div class="stat-label">Unnecessary features</div>
+    </div>
+    <div>
+      <div class="stat-number">∞</div>
+      <div class="stat-label">Tasks you can add</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="quote-inner">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">The secret of getting ahead is getting started. A simple tool that stays out of your way is all you need.</p>
+    <div class="quote-author">— Mark Twain</div>
+  </div>
+</section>
+
+
+{% endblock %}
