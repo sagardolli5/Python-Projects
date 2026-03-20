@@ -1,0 +1,314 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid #e8eaf0;
+      padding: 0 2rem;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #4f46e5;
+      letter-spacing: -.02em;
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    .nav-user {
+      font-size: .85rem;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    .btn-logout {
+      padding: .4rem .9rem;
+      font-size: .8rem;
+      font-weight: 500;
+      font-family: inherit;
+      background: transparent;
+      color: #9ca3af;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all .15s;
+    }
+
+    .btn-logout:hover { color: #ef4444; border-color: #fecaca; background: #fff0f0; }
+
+    /* ── PAGE ── */
+    .page {
+      max-width: 620px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      display: flex;
+      gap: .65rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 180px;
+      position: relative;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: .85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #c3c8d4;
+      font-size: .85rem;
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: .65rem .9rem .65rem 2.3rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: .88rem;
+      font-family: inherit;
+      background: #fff;
+      color: #1a1a2e;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .search-input:focus { border-color: #4f46e5; }
+    .search-input::placeholder { color: #c3c8d4; }
+
+    .total-badge {
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: .82rem;
+      font-weight: 600;
+      padding: .55rem .9rem;
+      border-radius: 8px;
+      border: 1px solid #e0e7ff;
+      white-space: nowrap;
+    }
+
+    .btn-add {
+      padding: .6rem 1.15rem;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: .85rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .15s;
+    }
+
+    .btn-add:hover { background: #4338ca; }
+
+    /* ── TASK CARD ── */
+    .task-card {
+      background: #fff;
+      border: 1px solid #e8eaf0;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .task-card-header {
+      padding: .9rem 1.25rem;
+      border-bottom: 1px solid #f0f1f5;
+    }
+
+    .task-card-title {
+      font-size: .78rem;
+      font-weight: 600;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      padding: .9rem 1.25rem;
+      border-bottom: 1px solid #f5f6f8;
+      transition: background .15s;
+    }
+
+    .task-item:last-child { border-bottom: none; }
+    .task-item:hover { background: #fafbff; }
+
+    .task-dot {
+      width: 10px;
+      height: 10px;
+      min-width: 10px;
+      border-radius: 50%;
+      background: #c7d2fe;
+      border: 2px solid #a5b4fc;
+    }
+
+    .task-item.done .task-dot {
+      background: #6ee7b7;
+      border-color: #34d399;
+    }
+
+    .task-text {
+      flex: 1;
+      font-size: .9rem;
+      color: #374151;
+    }
+
+    .task-item.done .task-text {
+      text-decoration: line-through;
+      color: #c3c8d4;
+    }
+
+    .task-date {
+      font-size: 0.85rem;
+      color: #555;  /* lighter than task name */
+      margin-left: 8px;
+      font-family: inherit; /* ensures same font as task-text */
+    }
+    .btn-delete {
+      padding: .32rem .7rem;
+      background: #fff0f0;
+      color: #ef4444;
+      border: 1px solid #fecaca;
+      border-radius: 6px;
+      font-size: .75rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+    }
+
+    .btn-delete:hover { background: #fee2e2; }
+
+    .empty {
+      padding: 3rem;
+      text-align: center;
+      color: #c3c8d4;
+      font-size: .88rem;
+    }
+
+    /* ── ADD MODAL (CSS :target) ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.28);
+      backdrop-filter: blur(3px);
+      z-index: 100;
+      place-items: center;
+    }
+
+    .modal-overlay:target { display: grid; }
+
+    .modal {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 380px;
+      margin: 1rem;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,.1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      color: #9ca3af;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: .8rem;
+    }
+
+    .modal-close:hover { background: #fee2e2; color: #ef4444; }
+
+    .modal-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: .25rem;
+    }
+
+    .modal-sub {
+      color: #9ca3af;
+      font-size: .82rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .modal input[type="text"] {
+      width: 100%;
+      padding: .65rem .9rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-family: inherit;
+      color: #1a1a2e;
+      outline: none;
+      margin-bottom: 1rem;
+      transition: border-color .2s;
+    }
+
+    .modal input[type="text"]:focus { border-color: #4f46e5; }
+    .modal input[type="text"]::placeholder { color: #c3c8d4; }
+
+    .btn-submit {
+      width: 100%;
+      padding: .7rem;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: .88rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background .15s;
+    }
+
+    /* Main content grows to take available space */
+    .main-container {
+      flex: 1;
+    }
+
+    /* Footer styling */
+    footer {
+      background: #f3f3f3; /* or your preferred color */
+      padding: 20px;
+      text-align: center;
+    }
+    .btn-submit:hover { background: #4338ca; }
