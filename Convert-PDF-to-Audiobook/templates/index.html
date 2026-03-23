@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text To Speech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+ 
+  <nav>
+    <div class="logo">Text2<span>Speech</span></div>
+  </nav>
+ 
+  <main>
+    <div class="title">
+      <h1>Listen to any <em>document</em></h1>
+      <p>Upload a file and we'll read it aloud for you.</p>
+    </div>
+ 
+    <div class="upload-area">
+    <form action="/" method="POST" enctype="multipart/form-data">
+
+      <input type="file" id="file-input" name="file" accept=".pdf,.txt,.docx"/>
+
+      <label class="btn-upload" for="file-input">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        Choose a file
+      </label>
+  <button type="submit" class="btn-start">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+      <polygon points="5 3 19 12 5 21 5 3"/>
+    </svg>
+    Start
+  </button>
+          </form>
+{% if filename %}
+  <p>📂 <span>{{ filename }}</span></p>
+  <audio controls>
+    <source src="/static/output.mp3" type="audio/mpeg">
+  </audio>
+      <a href="/" class="btn-cancel">✕ Choose another file</a>
+{% endif %}
+    </div>
+  </main>
+</body>
+</html>
+ 

@@ -1,0 +1,199 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0f11;
+      --surface: #1a1a1e;
+      --border: #2a2a30;
+      --accent: #e8c97a;
+      --text: #f0ede6;
+      --muted: #6a6875;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      padding: 24px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .logo span {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      padding: 48px 24px;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .title h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .title h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--accent);
+    }
+
+    .title p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* UPLOAD AREA */
+    .upload-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+
+    /* Hidden real input */
+    #file-input { display: none; }
+
+    /* Upload button */
+    .btn-upload {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1.5px dashed var(--border);
+      border-radius: 14px;
+      color: var(--muted);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      padding: 20px 40px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .btn-upload svg {
+      width: 20px; height: 20px;
+      stroke: currentColor; fill: none; stroke-width: 1.8;
+      flex-shrink: 0;
+    }
+
+    .btn-upload:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(232,201,122,0.04);
+    }
+
+    /* File name shown after selection */
+    .file-name {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+    }
+
+    .file-name span {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* PLAY BUTTON — hidden until file is chosen */
+    .play-btn {
+      display: flex;
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, opacity 0.2s;
+      animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .play-btn svg {
+      width: 26px; height: 26px;
+      fill: #0f0f11;
+      stroke: none;
+      margin-left: 4px; /* optical center for play icon */
+    }
+
+    .play-btn:hover { transform: scale(1.08); opacity: 0.9; }
+
+    @keyframes popIn {
+      from { transform: scale(0.6); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-cancel {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 24px;
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-cancel:hover {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 28px;
+  background: #e8c97a;
+  border-radius: 10px;
+  color: #0f0f11;
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-start:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
