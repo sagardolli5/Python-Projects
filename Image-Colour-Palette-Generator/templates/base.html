@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Rainbow{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  {% block css %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="logo">
+      <span class="logo-dot"></span>
+      Rainbow
+    </a>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+<footer class="site-footer">
+  <div class="palette-preview" aria-hidden="true">
+    <span style="--c:#FF6B6B"></span>
+    <span style="--c:#4ECDC4"></span>
+    <span style="--c:#FFD93D"></span>
+    <span style="--c:#6A0572"></span>
+    <span style="--c:#1B1F23"></span>
+    <span style="--c:#F0E5D8"></span>
+    <span style="--c:#FF8C42"></span>
+    <span style="--c:#2EC4B6"></span>
+    <span style="--c:#9D4EDD"></span>
+    <span style="--c:#6B705C"></span>
+  </div>
+    <p>Drop a photo. Discover its soul.</p>
+  </footer>
+</body>
+</html>
