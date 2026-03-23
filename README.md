@@ -1,6 +1,5 @@
 # 🐍 Python Projects
 One project at a time, one skill at a time.
-
 ## 📁 Projects
 | Project | Description |
 |--------|-------------|
@@ -11,6 +10,7 @@ One project at a time, one skill at a time.
 | [Breakout Game](./Breakout-Game) | A classic brick-breaking arcade game built with Turtle |
 | [Cafe Lists](./Cafe-Lists) | A Flask web app to discover, add and manage café listings with maps and a full database |
 | [To-Do Website](./To-Do-Website) | A full-stack task manager web app built with Flask & SQLite |
+| [Disappearing Text Writing App](./Disappearing-Text-Writing-App) | A writing app where your text disappears if you stop typing |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
@@ -25,7 +25,6 @@ One project at a time, one skill at a time.
 ```bash
    python main.py
 ```
-
 ## 📅 Progress
 - Day 1 - Morse Code Translator ✅
 - Day 2 - Tic Tac Toe Game ✅
@@ -34,7 +33,7 @@ One project at a time, one skill at a time.
 - Day 5 - Breakout Game ✅
 - Day 6 - Cafe Lists ✅
 - Day 7 - To-Do Website ✅
-- Day 8 - Coming soon...
-
+- Day 8 - Disappearing Text Writing App ✅
+- Day 9 - Coming soon...
 ---
 ⭐ Star this repo if you find it helpful!
