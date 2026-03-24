@@ -13,6 +13,7 @@ One project at a time, one skill at a time.
 | [Disappearing Text Writing App](./Disappearing-Text-Writing-App) | A writing app where your text disappears if you stop typing |
 | [Convert PDF to Audiobook](./Convert-PDF-to-Audiobook) | Convert PDF files into spoken audiobooks using text-to-speech |
 | [Image Colour Palette Generator](./Image-Colour-Palette-Generator) | Extracts and displays a colour palette from any image |
+| [Custom Web Scraper](./Custom-Web-Scraper) | A custom web scraper to extract and collect data from websites |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
@@ -35,7 +36,8 @@ One project at a time, one skill at a time.
 - Day 8 - Disappearing Text Writing App ✅
 - Day 9 - Convert PDF to Audiobook ✅
 - Day 10 - Image Colour Palette Generator ✅
-- Day 11 - Coming soon...
+- Day 11 - Custom Web Scraper ✅
+- Day 12 - Coming soon...
 
 ---
 ⭐ Star this repo if you find it helpful!
