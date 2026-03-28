@@ -14,6 +14,7 @@ One project at a time, one skill at a time.
 | [Convert PDF to Audiobook](./Convert-PDF-to-Audiobook) | Convert PDF files into spoken audiobooks using text-to-speech |
 | [Image Colour Palette Generator](./Image-Colour-Palette-Generator) | Extracts and displays a colour palette from any image |
 | [Custom Web Scraper](./Custom-Web-Scraper) | A custom web scraper to extract and collect data from websites |
+| [Space Invaders](./Space-Invaders) | A classic Space Invaders arcade game built with Pygame |
 
 ## 🛠️ How to Run Locally
 1. Clone the repo:
@@ -37,7 +38,8 @@ One project at a time, one skill at a time.
 - Day 9 - Convert PDF to Audiobook ✅
 - Day 10 - Image Colour Palette Generator ✅
 - Day 11 - Custom Web Scraper ✅
-- Day 12 - Coming soon...
+- Day 12 - Space Invaders ✅
+- Day 13 - Coming soon...
 
 ---
 ⭐ Star this repo if you find it helpful!
