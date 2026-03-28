@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrewMap — Brewery Directory</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🍺 Brew<span>Map</span></div>
+    <div class="header-tag">Open Brewery DB</div>
+  </header>
+
+  <!-- ─── MAIN CONTENT ─── -->
+{% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer>
+    <div>Data from <a href="https://www.openbrewerydb.org" target="_blank">Open Brewery DB</a></div>
+    <div><code>GET https://api.openbrewerydb.org/v1/breweries</code></div>
+  </footer>
+
+</body>
+</html>

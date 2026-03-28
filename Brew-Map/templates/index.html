@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block title %}Cafe Lists{% endblock %}
+{% block content %}
+
+  <!-- Main -->
+  <main class="main">
+    <div class="grid" id="brewery-grid">
+
+      <!-- Card -->
+      {% for brew in breweries %}
+      <article class="card">
+        <div class="card-header">
+          <div class="card-name">{{brew.name}}</div>
+          <span class="type-badge type-micro">{{brew.brewery_type}}</span>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1.5C5.79 1.5 4 3.29 4 5.5c0 3 4 9 4 9s4-6 4-9c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="currentColor"/>
+            </svg>
+            <div>
+              <div class="field-label">Address</div>
+              <div class="field-value">{{brew.street}}, {{brew.city}}, {{brew.state}} {{brew.postal_code}} · {{brew.country}}</div>
+            </div>
+          </div>
+          <hr/>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 16 16" fill="none">
+              <path d="M2.5 4.5C2.5 3.67 3.17 3 4 3h1.4l1 2.4-1.2.8a7.6 7.6 0 0 0 4 4l.8-1.2 2.4 1v1.4c0 .83-.67 1.5-1.5 1.5C5.14 13 2.5 7.86 2.5 4.5z" stroke="currentColor" stroke-width="1.3" fill="none"/>
+            </svg>
+            <div>
+              <div class="field-label">Phone</div>
+              <div class="field-value"><a href="tel:+15308939786">{{brew.phone}}</a></div>
+            </div>
+          </div>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M8 2s-2.5 2.5-2.5 6S8 14 8 14" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M8 2s2.5 2.5 2.5 6S8 14 8 14" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M2 8h12" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+            <div>
+              <div class="field-label">Website</div>
+              <div class="field-value">
+                {% if brew.website_url %}
+                <a href="{{brew.website_url}}" target="_blank">
+                  {{ brew.website_url.replace('http://', '').replace('https://', '').replace('www.', '') }} ↗
+                </a>
+                {% else %}
+                  <em>No website</em>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <hr/>
+          <div class="field">
+            <svg class="field-icon" viewBox="0 0 16 16" fill="none">
+              <path d="M2 12L6 4l4 6 2-3 4 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <div class="field-label">Coordinates</div>
+              <div class="field-value">
+                {% if brew.latitude and brew.longitude %}
+                <span class="coords">{{brew.latitude | round(4)}}° N, {{brew.longitude | round(4)}}° W</span>
+                {% else %}
+                <em>Search on map</em>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-id">{{ brew.name.replace(' ', '-') }}-{{brew.city}}</span>
+          <a href="{{brew.website_url}}" target="_blank" class="visit-btn">Visit ↗</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+
+{% if total_pages > 1 %}
+<div class="pagination">
+  {% if page > 1 %}
+    <a href="?page={{ page - 1 }}" class="page-btn">← Prev</a>
+  {% endif %}
+
+  {% for p in range(1, total_pages + 1) %}
+    {% if p == page %}
+      <span class="page-btn active">{{ p }}</span>
+    {% elif p == 1 or p == total_pages or (p >= page - 2 and p <= page + 2) %}
+      <a href="?page={{ p }}" class="page-btn">{{ p }}</a>
+    {% elif p == page - 3 or p == page + 3 %}
+      <span class="page-ellipsis">…</span>
+    {% endif %}
+  {% endfor %}
+
+  {% if page < total_pages %}
+    <a href="?page={{ page + 1 }}" class="page-btn">Next →</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}
